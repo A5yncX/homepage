@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@font-face {
+  font-family: 'monaspace'; /* 字体名称，可以自定义 */
+  src: local('monaspace'), url('Monaspace.woff') format('woff');
+  /* 字体文件的本地引用和文件路径 */
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --bg: #5f4b8b;
@@ -7,7 +13,7 @@
   --containerBg: #272727ba;
   --searchBg: var(--containerBg);
   --scrollbarColor: #3f3f3fda;
-  --fontFamily: 'Roboto Mono', monospace;
+  --fontFamily: 'monaspace', monospace;
 }
 
 
