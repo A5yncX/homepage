@@ -10,6 +10,7 @@ const bookmarks = [
   {
     title: "Project🖥️",
     links: [
+      { name: "Status", url: "https://stats.uptimerobot.com/QpAwQuBJ2o" },
       { name: "Docsify-Darcular", url: "https://github.com/A5yncX/docsify-theme-darcula" },
       { name: "Notion-To-Beancount", url: "https://github.com/A5yncX/notion-to-beancount" },
       { name: "Sourcecode", url: "https://github.com/A5yncX/homepage" },
