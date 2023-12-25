@@ -6,6 +6,15 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'pixel'; /* 字体名称，可以自定义 */
+  src: local('pixel'), url('pixel.woff2') format('woff');
+  /* 字体文件的本地引用和文件路径 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --bg: #5f4b8b;
   --fg: #ffffff;
@@ -13,7 +22,7 @@
   --containerBg: #272727ba;
   --searchBg: var(--containerBg);
   --scrollbarColor: #3f3f3fda;
-  --fontFamily: 'monaspace', monospace;
+  --fontFamily: pixel, monospace;
 }
 
 
@@ -69,7 +78,7 @@
       
 
 #title {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-size: 3.5rem;
   font-weight: 600;
   font-family: var(--fontFamily);
@@ -148,8 +157,8 @@
   background-color: var(--containerBg);
   border-radius: 10px;
   font-family: var(--fontFamily);
-  font-size: 0.85rem;
-  width: 25%;
+  font-size: 0.9rem;
+  width: 50%;
   height: 12em;
   margin: 0em 0.5em;
   box-sizing: border-box;
