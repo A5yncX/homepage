@@ -43,7 +43,7 @@
           window.open(searchUrl + val);
         }
       }
-      // Handle writing out Bookmarks
+      // 处理bookmarks
       function setupBookmarks() {
         const bookmarkContainer = document.getElementById("bookmark-container");
         bookmarkContainer.innerHTML = bookmarks
@@ -65,13 +65,6 @@
 
       window.onload = () => {
         setupBookmarks();
-        // getWeather();
-        // // Set up the title
-        // document.getElementById("title").innerHTML = getTime();
-        // // Set title interval to tick title
-        // setInterval(() => {
-        //   document.getElementById("title").innerHTML = getTime();
-        // }, 100);
       };
 
       document.addEventListener("keyup", (event) => {
