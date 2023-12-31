@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Redirect</title>
+  <script>
+    // 获取浏览器语言
+    var userLanguage = navigator.language || navigator.userLanguage;
 
-  <title>Homepage</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="demo.svg" rel="shortcut icon" type="image/svg" />
+    // 根据浏览器语言进行重定向
+    if (userLanguage.startsWith('zh')) {
+      window.location.href = 'zh/index.html'; // 中文网站地址
+    } else {
+      window.location.href = 'en/index.html'; // 英文网站地址
+    }
+  </script>
 </head>
-
-<body class="body-background">
-  <div class="container">
-
-  </div>
+<body>
+  <!-- 这里可以添加一些加载中的提示，或者直接重定向，视需求而定 -->
+  <p>Loading...</p>
 </body>
-
 </html>
