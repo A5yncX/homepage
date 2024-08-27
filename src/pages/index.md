@@ -5,6 +5,8 @@ title: AsyncX's Homepage
 
 # Oops, You found me.
 
+Here is my Landing Page, you can access [my blog](https://blog.asyncx.top) and [my social media](https://neodb.social/users/AsyncX/) from here.
+
 这里是我的 Landing Page, 你可以从这里访问到[我的博客](https://blog.asyncx.top)/[我的影音](https://neodb.social/users/AsyncX/).
 
 <!-- ![](https://r2.asyncx.top/2024/08/27/202408272314273.webp) -->
