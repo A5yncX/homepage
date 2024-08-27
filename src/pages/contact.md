@@ -8,8 +8,13 @@ I can usually be reached via [Mail](mailto:contact@asyncx.top).
 <br>
 <br>
 
+You can also find me on social media platforms.
+
+你也可以在社交媒体平台上找到我。
 
 [Telegram](https://t.me/asyncx)
+
+[Youtube](https://www.youtube.com/@AsyncX0806/)
 
 [Instagram](https://www.instagram.com/A1gernon)
 
