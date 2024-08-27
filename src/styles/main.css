@@ -1,0 +1,51 @@
+:root {
+    --fontc: #fdfff2;
+    --accent: #ffb300;
+    --hc: #9bdbee;
+    --bgc: #1d1e25;
+}
+body {
+    background-color: var(--bgc);
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 默认每行3张图片 */
+    gap: 0; /* 图片之间无间隙 */
+  }
+  
+  .thumb {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .thumb {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 隐藏容器外的部分 */
+  }
+  
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 图片填充容器，可能会裁剪 */
+    display: block;
+  }
+
+  .category-group {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .thumb {
+      width: calc(50% - 10px);
+    }
+  }
+  @media (max-width: 480px) {
+    .thumb {
+      width: 100%;
+    }
+  }
+  

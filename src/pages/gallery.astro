@@ -1,0 +1,52 @@
+---
+const images = [
+  { "src": "https://r2.asyncx.top/2024/08/27/202408272314273.webp", "category": "Category 1" },
+  { "src": "https://r2.asyncx.top/2024/08/27/202408272311814.webp", "category": "Category 1" },
+  { "src": "https://r2.asyncx.top/2024/06/16/202406161446563.webp", "category": "Category 2" },
+  { "src": "https://r2.asyncx.top/2024/08/27/202408272314273.webp", "category": "Category 2" },
+  { "src": "https://r2.asyncx.top/2024/08/27/202408272311814.webp", "category": "Category 1" },
+  { "src": "https://r2.asyncx.top/2024/06/16/202406161446563.webp", "category": "Category 1" },
+  { "src": "https://r2.asyncx.top/2024/08/27/202408272314273.webp", "category": "Category 1" },
+  { "src": "https://r2.asyncx.top/2024/08/27/202408272311814.webp", "category": "Category 1" },
+  { "src": "https://r2.asyncx.top/2024/06/16/202406161446563.webp", "category": "Category 3" },
+];
+
+import '../../src/styles/main.css'
+const isHome = Astro.url.pathname === '/';
+
+// Group images by category
+const groupedImages = images.reduce((acc, img) => {
+  if (!acc[img.category]) {
+    acc[img.category] = [];
+  }
+  acc[img.category].push(img);
+  return acc;
+}, {});
+
+---
+
+<div>
+  {!isHome && (
+    <a href="/">back</a>
+  )}
+</div>
+
+<div id="main">
+  {Object.keys(groupedImages).map(category => (
+    <h2>{category}</h2>
+    <div class="category-group">
+      {groupedImages[category].map(img => (
+        <article class="thumb">
+          <a class="image" href={img.src}>
+            <img
+              src={img.src}
+              width="750"
+              height="750"
+              alt={category}
+            />
+          </a>
+        </article>
+      ))}
+    </div>
+  ))}
+</div>

@@ -1,5 +1,4 @@
 ---
-// https://github.com/fontsource/font-files/tree/3ef0dc8e3b625831a3ce7d586194c718491b7c6f/fonts/google/jetbrains-mono
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
 import { fade, ViewTransitions } from 'astro:transitions'
@@ -58,7 +57,10 @@ const pageTitle = [
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
+		--fontc: #fdfff2;
+		--accent: #ffb300;
+		--hc: #9bdbee;
+		--bgc: #1d1e25;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
@@ -72,7 +74,7 @@ const pageTitle = [
 		font-family: "JetBrains Mono", system-ui, sans-serif;
 		font-size: 14px;
 		line-height: 1.2rem;
-		background: #13151a;
+		background: var(--bgc);
 		background-size: 224px;
 	}
 	body {
@@ -81,14 +83,14 @@ const pageTitle = [
 		justify-content: center;
 	}
 	p,h1,h2 {
-		color: #fff;
+		color: var(--fontc);
 	}
 	a {
-		color: #a1e7fa;
+		color: var(--hc);
 		text-decoration: dotted;
 	}
 	a:hover {
-		color: #ec625c;
+		color: var(--accent);
 	}
 	img {
   		width: 350px;

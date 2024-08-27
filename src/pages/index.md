@@ -17,4 +17,4 @@ Here is my Landing Page, you can access [my blog](https://blog.asyncx.top) and [
 
 [- What am I up to recently?/我最近在干什么?](/recent)
 
-[- Gallary/画廊(Beta)](/gallary)
+[- Gallary/画廊(Beta)](/gallery)
