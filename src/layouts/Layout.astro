@@ -39,7 +39,7 @@ const pageTitle = [
 		<ViewTransitions />
 	</head>
 	<body class={`text-gray-500 dark:text-gray-100 ${ isHome ? 'is-home' : '' }`}>
-		<div class="max-w-5xl mx-auto space-y-4 py-16 px-14">
+		<div class="main">
 			<div>
 				{ !isHome && (
 					<a href="/">⬅️back</a>
@@ -77,10 +77,25 @@ const pageTitle = [
 	}
 	body {
 		display: flex;
+		justify-content: center;
+	}
+	p,h1,h2 {
+		color: #fff;
 	}
 	a {
 		color: #a1e7fa;
+		text-decoration: dotted;
 	}
+	a:hover {
+		color: #ec625c;
+	}
+	img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover; /* Ensures the image covers the entire square */
+  border-radius: 3px; /* Optional: Adds rounded corners */
+}
+
 	/* Light mode */
 	@media (prefers-color-scheme: light) {
 		html {

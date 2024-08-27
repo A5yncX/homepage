@@ -3,16 +3,14 @@ layout: ../layouts/Layout.astro
 title: AsyncX's Homepage
 ---
 
-
 # Oops, You found me.
 
-这里是我的 Landing Page, 你可以在这里了解我.
+这里是我的 Landing Page, 你可以从这里访问到[我的博客](https://blog.asyncx.top)/[我的影音](https://neodb.social/users/AsyncX/).
 
+<!-- ![](https://r2.asyncx.top/2024/08/27/202408272314273.webp) -->
 
-[- Want to contact me?/想要联系我?](/contact)
+[- contact me/联系我](/contact)
 
-[onlyfans](/onlyfans)
+[- What am I up to recently?/我最近在干什么?](/recent)
 
-[twitter](https://twitter.com/Casey)
-
-[联系我](/contact)
+[- Gallary/画廊(Beta)](/gallary)
