@@ -54,13 +54,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    .category-img {
-        display: grid;
-    }
 }
 
 @media (max-width: 480px) {
     .category-img {
         display: grid;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
