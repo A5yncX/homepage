@@ -36,7 +36,7 @@ const pageTitle = [
 
 		<ViewTransitions />
 	</head>
-	<body class={`text-gray-500 dark:text-gray-100 ${ isHome ? 'is-home' : '' }`}>
+	<body class={`${ isHome ? 'is-home' : '' }`}>
 		<div class="main">
 			<div>
 				{ !isHome && (
@@ -129,6 +129,10 @@ a:hover {
 code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
+pre.astro-code{
+	background-color: #00000000!important;
+	color: var(--fontc)!important;
+}
 
 /* Image Styles */
 img {
@@ -149,5 +153,6 @@ img {
 ol {
     color: #fff;
 }
+
 
 </style>
