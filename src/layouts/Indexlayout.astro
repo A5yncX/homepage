@@ -6,54 +6,55 @@ import { fade, ViewTransitions } from 'astro:transitions'
 import Sf from "../components/Starfield.astro";
 import { SITE_NAME, DESCRIPTION } from '../../src/config'
 interface Props {
-	title: string;
+  title: string;
 }
 
-// @ts-ignore - TODO figure otu type safety on this
+// @ts-ignore - TODO figure out type safety on this
 const { frontmatter } = Astro.props
 
 const isHome = Astro.url.pathname === '/'
 
 const pageTitle = [
-	frontmatter.title ? frontmatter.title : undefined,
-	isHome ? SITE_NAME : undefined,
+  frontmatter.title ? frontmatter.title : undefined,
+  isHome ? SITE_NAME : undefined,
 ].filter(Boolean).join(' | ')
 
 ---
 
 <!doctype html>
 <html 
-	lang="en"
-	transition:animate={fade({ duration: '0.3s' })}
+  lang="en"
+  transition:animate={fade({ duration: '0.3s' })}
 >
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={ DESCRIPTION } />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ pageTitle }</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={ DESCRIPTION } />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{ pageTitle }</title>
 
-		<ViewTransitions />
-	</head>
-	<body class={`${ isHome ? 'is-home' : '' }`}>
-		<div class="main">
-			<div>
-				{ !isHome && (
-					<a href="/">⬅️back</a>
-				)}
-			</div>
-			<main 
-				class="max-w-xl"
-			>
-				<slot />
-			</main>
-			<!-- <Sf /> -->
-			<footer>
-			</footer>
-		</div>
-	</body>
+    <ViewTransitions />
+  </head>
+  <body class={`${ isHome ? 'is-home' : '' }`}>
+    <div class="main">
+      <div>
+        { !isHome && (
+          <a href="/">⬅️back</a>
+        )}
+      </div>
+      <main 
+        class="max-w-xl"
+      >
+        <slot />
+      </main>
+      <!-- <Sf /> -->
+      <footer>
+      </footer>
+    </div>
+  </body>
 </html>
+
 <style is:global>
 /* Define font and color variables */
 :root {
@@ -85,14 +86,12 @@ html {
     font-size: 14px;
     line-height: 1.2rem;
     background: var(--bgc);
-    /* background-size: 224px; */
 }
 
 /* Body Styles */
 body {
     font-family: 'Zpix', Courier, monospace;
     color: var(--fontc);
-    /* background-color: var(--bgc); */
     max-width: 900px;
     margin: 0 auto;
     /* padding: 3rem 0; */
@@ -101,6 +100,8 @@ body {
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     min-height: 100vh; /* Ensure body covers the full viewport height */
+    overflow-wrap: break-word; /* Force long words or URLs to break */
+    white-space: normal; /* Allow text to wrap */
 }
 
 /* Text Elements */
@@ -129,9 +130,10 @@ a:hover {
 code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
-pre.astro-code{
-	background-color: #00000000!important;
-	color: var(--fontc)!important;
+
+pre.astro-code {
+    background-color: #00000000 !important;
+    color: var(--fontc) !important;
 }
 
 /* Image Styles */
@@ -153,6 +155,15 @@ img {
 ol {
     color: #fff;
 }
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 700px) {
+    /* Hide <pre><code> content on mobile and tablet devices */
+    pre.astro-code {
+        display: none;
+    }
+}
 
-
+@media (max-width: 480px) {
+    /* Additional styles for very small screens, if needed */
+}
 </style>

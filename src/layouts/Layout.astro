@@ -38,7 +38,7 @@ const pageTitle = [
 	</head>
 	<body class={`${ isHome ? 'is-home' : '' }`}>
 		<div class="main">
-			<div>
+			<div class="ishome">
 				{ !isHome && (
 					<a href="/">⬅️back</a>
 				)}
@@ -93,7 +93,7 @@ body {
     font-family: 'Zpix', Courier, monospace;
     color: var(--fontc);
     /* background-color: var(--bgc); */
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     /* padding: 3rem 0; */
     display: flex;
@@ -102,7 +102,9 @@ body {
     align-items: center; /* Center content horizontally */
     min-height: 100vh; /* Ensure body covers the full viewport height */
 }
-
+.ishome {
+	margin-top: 2rem;
+}
 /* Text Elements */
 p, h1, h2 {
     color: var(--fontc);

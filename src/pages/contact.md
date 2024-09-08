@@ -1,9 +1,9 @@
 ---
 layout: ../layouts/Layout.astro
 ---
-I can usually be reached via [Mail](mailto:contact@asyncx.top).
+I can usually be contacted by [email](mailto:contact@asyncx.top), in which you can describe in detail the problem you are experiencing and the actions you have already taken.
 
-通常可以通过[邮件](mailto:contact@asyncx.top)联系我.
+通常可以通过[邮件](mailto:contact@asyncx.top)联系我, 请你在邮件中详细描述你所遇到的问题和你已经付诸的行动.
 
 <br>
 <br>
