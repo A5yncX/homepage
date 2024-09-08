@@ -52,4 +52,145 @@ const isHome = Astro.url.pathname === '/';
     </div>
   ))}
 </div>
+<style>
+  :root {
+    --fontc: #fdfff2;
+    --accent: #ffb300;
+    --hc: #9bdbee;
+    --bgc: #1d1e25;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+    );
+}
+
+/* Import custom font */
+@font-face {
+    font-family: 'Zpix';
+    src: url('../components/zpix.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global Styles */
+html {
+    font-family: 'Zpix', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.2rem;
+    background: var(--bgc);
+    background-size: 224px;
+}
+
+/* Body Styles */
+body {
+  font-family: "Zpix", Courier, monospace;
+    color: var(--fontc);
+    background-color: var(--bgc);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Text Elements */
+p, h1, h2 {
+    color: var(--fontc);
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+/* Links */
+a {
+    color: var(--hc);
+    text-decoration: dotted;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* Code Elements */
+code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+/* Image Styles */
+img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; /* Ensures the image covers the entire square */
+    border-radius: 3px; /* Optional: Adds rounded corners */
+}
+
+.thumb img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Ensures the image covers the entire square */
+    display: block;
+}
+
+/* Ordered Lists */
+ol {
+    color: #fff;
+}
+
+  #main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between categories */
+}
+
+.category {
+    /* Additional category styles if needed */
+}
+
+.category-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+}
+
+.category-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
+    overflow: hidden;
+    flex-direction: row; /* Arrange images horizontally */
+}
+
+/* Media Queries */
+@media (hover: none) {
+    html {
+        font-size: 18px;
+    }
+
+    p > a:only-child {
+        padding: 0.5rem 0;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-img {
+        display: grid;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+</style>
 </html>
