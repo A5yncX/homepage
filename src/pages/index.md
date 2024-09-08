@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Layout.astro
+layout: ../layouts/Indexlayout.astro
 title: AsyncX's Homepage
 ---
 
